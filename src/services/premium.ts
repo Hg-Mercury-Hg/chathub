@@ -19,11 +19,11 @@ export async function activatePremium(licenseKey: string): Promise<PremiumActiva
 
 export async function validatePremium() {
    return { valid: true }
-  // const activation = getPremiumActivation()
-  // if (!activation) {
-  //   return { valid: false }
-  // }
-  // return lemonsqueezy.validateLicense(activation.licenseKey, activation.instanceId)
+     const activation = getPremiumActivation()
+     if (!activation) {
+       return { valid: false }
+     }
+    return lemonsqueezy.validateLicense(activation.licenseKey, activation.instanceId)
 }
 
 export async function deactivatePremium() {
